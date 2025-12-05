@@ -500,7 +500,6 @@
     /* SVG 내부의 모든 path, circle 등에도 currentColor 적용 */
     & svg * {
       fill: currentColor;
-      stroke: currentColor;
     }
   }
 
