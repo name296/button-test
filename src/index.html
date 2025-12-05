@@ -3,7 +3,7 @@
   <head>
     <!-- 기본 메타 정보 -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <meta name="color-scheme" content="light dark">
     <title>버튼 컴포넌트 시스템 - 데모</title>
 
@@ -58,8 +58,8 @@
       <div role="region" aria-label="버튼 컴포넌트 데모 영역">
         <!-- Primary1 팔레트 -->
         <section class="showcase content">
-          <h2>Primary1 팔레트 (Light 테마 기본)</h2>
-          <p>Light 테마의 기본 브랜드 색상을 사용하는 버튼들입니다. Dark 테마에서는 Dark 테마 색상으로 자동 전환됩니다.</p>
+          <h2>Primary1 팔레트</h2>
+          <p>테마의 기본 브랜드 색상을 사용하는 버튼들입니다.</p>
           <!-- Light 테마 버튼들 -->
           <div class="showcase content row-wrap">
             <!-- 기본 버튼 -->
@@ -107,8 +107,8 @@
 
         <!-- Primary2 팔레트 -->
         <section class="showcase content">
-          <h2>Primary2 팔레트 (Light 테마 변형)</h2>
-          <p>Light 테마의 변형 색상을 사용하는 버튼들입니다. Gray 색상과 조합하여 다양한 대비를 제공합니다.</p>
+          <h2>Primary2 팔레트</h2>
+          <p>테마의 변형 색상을 사용하는 버튼들입니다. Gray 색상과 조합하여 다양한 대비를 제공합니다.</p>
           <!-- Light 테마 버튼들 -->
           <div class="showcase content row-wrap">
             <!-- 기본 버튼 -->
@@ -260,21 +260,27 @@
           <div class="showcase content row-wrap">
             <!-- 기본 버튼 -->
             <button class="button primary3" type="button" aria-label="Primary3 기본 버튼">
-              <span class="icon" aria-hidden="true"></span>
-              <span class="label">기본 버튼</span>
+              <span class="background2" aria-hidden="true">
+                <span class="icon" aria-hidden="true"></span>
+                <span class="label">기본 버튼</span>
+              </span>
             </button>
 
             <!-- 토글 버튼 -->
             <button class="button primary3 pressed toggle" type="button" aria-label="Primary3 토글 버튼" aria-pressed="true">
               <span class="icon pressed" aria-hidden="true"></span>
-              <span class="icon" aria-hidden="true"></span>
-              <span class="label">토글 버튼</span>
+              <span class="background2" aria-hidden="true">
+                <span class="icon" aria-hidden="true"></span>
+                <span class="label">토글 버튼</span>
+              </span>
             </button>
 
             <!-- 비활성 버튼 -->
             <button class="button primary3" type="button" aria-label="Primary3 비활성 버튼" aria-disabled="true">
-              <span class="content icon" aria-hidden="true"></span>
-              <span class="content label">비활성 버튼</span>
+              <span class="background2" aria-hidden="true">
+                <span class="content icon" aria-hidden="true"></span>
+                <span class="content label">비활성 버튼</span>
+              </span>
             </button>
           </div>
 
@@ -282,21 +288,27 @@
           <div class="showcase content row-wrap dark">
             <!-- 기본 버튼 (Dark) -->
             <button class="button primary3" type="button" aria-label="Primary3 기본 버튼 (Dark)">
-              <span class="icon" aria-hidden="true"></span>
-              <span class="label">기본 버튼</span>
+              <span class="background2" aria-hidden="true">
+                <span class="icon" aria-hidden="true"></span>
+                <span class="label">기본 버튼</span>
+              </span>
             </button>
 
             <!-- 토글 버튼 (Dark) -->
             <button class="button primary3 pressed toggle" type="button" aria-label="Primary3 토글 버튼 (Dark)" aria-pressed="true">
               <span class="icon pressed" aria-hidden="true"></span>
-              <span class="icon" aria-hidden="true"></span>
-              <span class="label">토글 버튼</span>
+              <span class="background2" aria-hidden="true">
+                <span class="icon" aria-hidden="true"></span>
+                <span class="label">토글 버튼</span>
+              </span>
             </button>
 
             <!-- 비활성 버튼 (Dark) -->
             <button class="button primary3" type="button" aria-label="Primary3 비활성 버튼 (Dark)" aria-disabled="true">
-              <span class="content icon" aria-hidden="true"></span>
-              <span class="content label">비활성 버튼</span>
+              <span class="background2" aria-hidden="true">
+                <span class="content icon" aria-hidden="true"></span>
+                <span class="content label">비활성 버튼</span>
+              </span>
             </button>
           </div>
         </section>
@@ -309,21 +321,27 @@
           <div class="showcase content row-wrap">
             <!-- 기본 버튼 -->
             <button class="button secondary3" type="button" aria-label="Secondary3 기본 버튼">
-              <span class="icon" aria-hidden="true"></span>
-              <span class="label">기본 버튼</span>
+              <span class="background2" aria-hidden="true">
+                <span class="icon" aria-hidden="true"></span>
+                <span class="label">기본 버튼</span>
+              </span>
             </button>
 
             <!-- 토글 버튼 -->
             <button class="button secondary3 pressed toggle" type="button" aria-label="Secondary3 토글 버튼" aria-pressed="true">
               <span class="icon pressed" aria-hidden="true"></span>
-              <span class="icon" aria-hidden="true"></span>
-              <span class="label">토글 버튼</span>
+              <span class="background2" aria-hidden="true">
+                <span class="icon" aria-hidden="true"></span>
+                <span class="label">토글 버튼</span>
+              </span>
             </button>
 
             <!-- 비활성 버튼 -->
             <button class="button secondary3" type="button" aria-label="Secondary3 비활성 버튼" aria-disabled="true">
-              <span class="content icon" aria-hidden="true"></span>
-              <span class="content label">비활성 버튼</span>
+              <span class="background2" aria-hidden="true">
+                <span class="content icon" aria-hidden="true"></span>
+                <span class="content label">비활성 버튼</span>
+              </span>
             </button>
           </div>
 
@@ -331,21 +349,27 @@
           <div class="showcase content row-wrap dark">
             <!-- 기본 버튼 (Dark) -->
             <button class="button secondary3" type="button" aria-label="Secondary3 기본 버튼 (Dark)">
-              <span class="icon" aria-hidden="true"></span>
-              <span class="label">기본 버튼</span>
+              <span class="background2" aria-hidden="true">
+                <span class="icon" aria-hidden="true"></span>
+                <span class="label">기본 버튼</span>
+              </span>
             </button>
 
             <!-- 토글 버튼 (Dark) -->
             <button class="button secondary3 pressed toggle" type="button" aria-label="Secondary3 토글 버튼 (Dark)" aria-pressed="true">
               <span class="icon pressed" aria-hidden="true"></span>
-              <span class="icon" aria-hidden="true"></span>
-              <span class="label">토글 버튼</span>
+              <span class="background2" aria-hidden="true">
+                <span class="icon" aria-hidden="true"></span>
+                <span class="label">토글 버튼</span>
+              </span>
             </button>
 
             <!-- 비활성 버튼 (Dark) -->
             <button class="button secondary3" type="button" aria-label="Secondary3 비활성 버튼 (Dark)" aria-disabled="true">
-              <span class="content icon" aria-hidden="true"></span>
-              <span class="content label">비활성 버튼</span>
+              <span class="background2" aria-hidden="true">
+                <span class="content icon" aria-hidden="true"></span>
+                <span class="content label">비활성 버튼</span>
+              </span>
             </button>
           </div>
         </section>

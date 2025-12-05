@@ -19,6 +19,7 @@
     font-size: 1rem;
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
+    touch-action: manipulation; /* 핀치 줌 차단 */
     
     @media (prefers-reduced-motion: no-preference) {
       scroll-behavior: smooth;
@@ -512,6 +513,24 @@
     position: relative;
     display: flex;
     box-sizing: border-box;
+    
+    /* 이중 배경 레이어 스타일 (primary3, secondary3용) */
+    /* background1은 button의 background 자체 */
+    .background2 {
+      position: absolute;
+      top: auto;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 65%;
+      pointer-events: none;
+      border-bottom-left-radius: calc(var(--min-side) * 0.03125);
+      border-bottom-right-radius: calc(var(--min-side) * 0.03125);
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+    }
     /* 초기값은 --button-width, --button-height 사용, JS에서 --min-side 설정 후 비례 적용 */
     min-width: var(--button-width);
     min-height: var(--button-height);
@@ -656,25 +675,45 @@
       border-color: var(--primary3-border-color-default);
       color: var(--primary3-content-color-default);
       
+      .background2 {
+        background: var(--primary3-background2-color-default);
+      }
+      
       &.pressed:not(.toggle) {
         background: var(--primary3-background1-color-pressed);
         border-color: var(--primary3-border-color-pressed);
         color: var(--primary3-content-color-pressed);
+        
+        .background2 {
+          background: var(--primary3-background2-color-pressed);
+        }
       }
       &.toggle {
         background: var(--primary3-background1-color-default);
         border-color: var(--primary3-border-color-default);
         color: var(--primary3-content-color-default);
+        
+        .background2 {
+          background: var(--primary3-background2-color-default);
+        }
       }
       &.toggle.pressed {
         background: var(--primary3-background1-color-pressed);
         border-color: var(--primary3-border-color-pressed);
         color: var(--primary3-content-color-pressed);
+        
+        .background2 {
+          background: var(--primary3-background2-color-pressed);
+        }
       }
       &[aria-disabled="true"] {
         background: var(--primary3-background1-color-disabled);
         border-color: var(--primary3-border-color-disabled);
         color: var(--primary3-content-color-disabled);
+        
+        .background2 {
+          background: var(--primary3-background2-color-disabled);
+        }
       }
     }
 
@@ -741,25 +780,45 @@
       border-color: var(--secondary3-border-color-default);
       color: var(--secondary3-content-color-default);
       
+      .background2 {
+        background: var(--secondary3-background2-color-default);
+      }
+      
       &.pressed:not(.toggle) {
         background: var(--secondary3-background1-color-pressed);
         border-color: var(--secondary3-border-color-pressed);
         color: var(--secondary3-content-color-pressed);
+        
+        .background2 {
+          background: var(--secondary3-background2-color-default);
+        }
       }
       &.toggle {
         background: var(--secondary3-background1-color-default);
         border-color: var(--secondary3-border-color-default);
         color: var(--secondary3-content-color-default);
+        
+        .background2 {
+          background: var(--secondary3-background2-color-default);
+        }
       }
       &.toggle.pressed {
         background: var(--secondary3-background1-color-pressed);
         border-color: var(--secondary3-border-color-pressed);
         color: var(--secondary3-content-color-pressed);
+        
+        .background2 {
+          background: var(--secondary3-background2-color-default);
+        }
       }
       &[aria-disabled="true"] {
         background: var(--secondary3-background1-color-disabled);
         border-color: var(--secondary3-border-color-disabled);
         color: var(--secondary3-content-color-disabled);
+        
+        .background2 {
+          background: var(--secondary3-background2-color-default);
+        }
       }
     }
   }
@@ -901,7 +960,9 @@
       gap: var(--unit-sm); 
       
       &.row-wrap {
-        flex-flow: row wrap;
+        width: fit-content;
+        height: fit-content;
+        flex-flow: row nowrap;
         justify-content: center;
         align-items: center;
         gap: var(--unit-lg);
