@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ko" class="no-js">
+  <head>
+    <!-- 기본 메타 정보 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <title>버튼 컴포넌트 시스템 - 데모</title>
+
+    <!-- SEO 최적화 -->
+    <meta name="description" content="동적 스케일링과 접근성을 갖춘 버튼 컴포넌트 시스템 데모">
+    <meta name="keywords" content="버튼, 컴포넌트, 접근성, 반응형, 웹 개발">
+    <meta name="author" content="이강철">
+
+    <!-- 소셜 미디어 최적화 -->
+    <meta property="og:title" content="버튼 컴포넌트 시스템">
+    <meta property="og:description" content="동적 스케일링과 접근성을 갖춘 버튼 컴포넌트 시스템">
+    <meta property="og:type" content="website">
+    <meta property="og:site-name" content="버튼 컴포넌트 시스템 데모">
+    <meta property="og:locale" content="ko_KR">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="버튼 컴포넌트 시스템">
+    <meta name="twitter:description" content="Light/Dark 테마와 접근성을 갖춘 현대적 버튼 컴포넌트">
+
+    <!-- 접근성 메타데이터 -->
+    <meta name="theme-color" content="rgba(164, 105, 63, 1)" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="rgba(255, 225, 0, 1)" media="(prefers-color-scheme: dark)">
+
+    <!-- 리소스 로딩 최적화 -->
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+    
+    <!-- 앱 스타일 -->
+    <link rel="preload" href="app.css" as="style">
+    <link rel="stylesheet" href="app.css">
+
+    <!-- 폰트 최적화 -->
+    <link rel="preload" href="fonts/PretendardGOV-Regular.otf" as="font" type="font/otf" crossorigin>
+    <link rel="preload" href="fonts/PretendardGOV-SemiBold.otf" as="font" type="font/otf" crossorigin>
+    <link rel="preload" href="fonts/PretendardGOV-Bold.otf" as="font" type="font/otf" crossorigin>
+
+    <!-- 구조화 데이터 -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "버튼 컴포넌트 시스템",
+      "description": "동적 스케일링과 접근성을 갖춘 버튼 컴포넌트 시스템 데모",
+      "applicationCategory": "WebApplication",
+      "operatingSystem": "Web Browser",
+      "programmingLanguage": ["HTML", "CSS", "JavaScript"],
+      "keywords": "버튼, 컴포넌트, 접근성, 반응형, 웹 개발, Dark 테마",
+      "author": {
+        "@type": "Organization",
+        "name": "이강철"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "KRW",
+        "availability": "https://schema.org/InStock"
+      }
+    }
+    </script>
+  </head>
+  <body>
+    <!-- 페이지 헤더 -->
+    <header role="banner">
+      <section>
+        <h1>버튼 컴포넌트 시스템</h1>
+        <p>다양한 상태와 팔레트를 지원하는 접근성 중심의 버튼 컴포넌트입니다.</p>
+      </section>
+    </header>
+
+    <!-- 메인 콘텐츠 -->
+    <main role="main">
+      <!-- 콘텐츠 데모 영역 -->
+      <div role="region" aria-label="버튼 컴포넌트 데모 영역">
+        <!-- Primary1 팔레트 -->
+        <section class="showcase content">
+          <h2>Primary1 팔레트 (Light 테마 기본)</h2>
+          <p>Light 테마의 기본 브랜드 색상을 사용하는 버튼들입니다. Dark 테마에서는 Dark 테마 색상으로 자동 전환됩니다.</p>
+          <!-- Light 테마 버튼들 -->
+          <div class="showcase content row-wrap">
+            <!-- 기본 버튼 -->
+            <button class="button primary1" type="button" aria-label="Primary1 기본 버튼">
+              <span class="icon" aria-hidden="true"></span>
+              <span class="label">기본 버튼</span>
+            </button>
+
+            <!-- 토글 버튼 -->
+            <button class="button primary1 pressed toggle" type="button" aria-label="Primary1 토글 버튼" aria-pressed="true">
+              <span class="icon pressed" aria-hidden="true"></span>
+              <span class="icon" aria-hidden="true"></span>
+              <span class="label">토글 버튼</span>
+            </button>
+
+            <!-- 비활성 버튼 -->
+            <button class="button primary1" type="button" aria-label="Primary1 비활성 버튼" aria-disabled="true">
+              <span class="content icon" aria-hidden="true"></span>
+              <span class="content label">비활성 버튼</span>
+            </button>
+          </div>
+
+          <!-- Dark 테마 버튼들 -->
+          <div class="showcase content row-wrap dark">
+            <!-- 기본 버튼 (Dark) -->
+            <button class="button primary1" type="button" aria-label="Primary1 기본 버튼 (Dark)">
+              <span class="icon" aria-hidden="true"></span>
+              <span class="label">기본 버튼</span>
+            </button>
+
+            <!-- 토글 버튼 (Dark) -->
+            <button class="button primary1 pressed toggle" type="button" aria-label="Primary1 토글 버튼 (Dark)" aria-pressed="true">
+              <span class="icon pressed" aria-hidden="true"></span>
+              <span class="icon" aria-hidden="true"></span>
+              <span class="label">토글 버튼</span>
+            </button>
+
+            <!-- 비활성 버튼 (Dark) -->
+            <button class="button primary1" type="button" aria-label="Primary1 비활성 버튼 (Dark)" aria-disabled="true">
+              <span class="content icon" aria-hidden="true"></span>
+              <span class="content label">비활성 버튼</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- Primary2 팔레트 -->
+        <section class="showcase content">
+          <h2>Primary2 팔레트 (Light 테마 변형)</h2>
+          <p>Light 테마의 변형 색상을 사용하는 버튼들입니다. Gray 색상과 조합하여 다양한 대비를 제공합니다.</p>
+          <!-- Light 테마 버튼들 -->
+          <div class="showcase content row-wrap">
+            <!-- 기본 버튼 -->
+            <button class="button primary2" type="button" aria-label="Primary2 기본 버튼">
+              <span class="icon" aria-hidden="true"></span>
+              <span class="label">기본 버튼</span>
+            </button>
+
+            <!-- 토글 버튼 -->
+            <button class="button primary2 pressed toggle" type="button" aria-label="Primary2 토글 버튼" aria-pressed="true">
+              <span class="icon pressed" aria-hidden="true"></span>
+              <span class="icon" aria-hidden="true"></span>
+              <span class="label">토글 버튼</span>
+            </button>
+
+            <!-- 비활성 버튼 -->
+            <button class="button primary2" type="button" aria-label="Primary2 비활성 버튼" aria-disabled="true">
+              <span class="content icon" aria-hidden="true"></span>
+              <span class="content label">비활성 버튼</span>
+            </button>
+          </div>
+
+          <!-- Dark 테마 버튼들 -->
+          <div class="showcase content row-wrap dark">
+            <!-- 기본 버튼 (Dark) -->
+            <button class="button primary2" type="button" aria-label="Primary2 기본 버튼 (Dark)">
+              <span class="icon" aria-hidden="true"></span>
+              <span class="label">기본 버튼</span>
+            </button>
+
+            <!-- 토글 버튼 (Dark) -->
+            <button class="button primary2 pressed toggle" type="button" aria-label="Primary2 토글 버튼 (Dark)" aria-pressed="true">
+              <span class="icon pressed" aria-hidden="true"></span>
+              <span class="icon" aria-hidden="true"></span>
+              <span class="label">토글 버튼</span>
+            </button>
+
+            <!-- 비활성 버튼 (Dark) -->
+            <button class="button primary2" type="button" aria-label="Primary2 비활성 버튼 (Dark)" aria-disabled="true">
+              <span class="content icon" aria-hidden="true"></span>
+              <span class="content label">비활성 버튼</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- Secondary1 팔레트 -->
+        <section class="showcase content">
+          <h2>Secondary1 팔레트 (Gray 기반)</h2>
+          <p>테마에 독립적인 Gray 색상을 기반으로 하는 보조 버튼들입니다. 모든 테마에서 일관된 색상을 유지합니다.</p>
+          <!-- Light 테마 버튼들 -->
+          <div class="showcase content row-wrap">
+            <!-- 기본 버튼 -->
+            <button class="button secondary1" type="button" aria-label="Secondary1 기본 버튼">
+              <span class="icon" aria-hidden="true"></span>
+              <span class="label">기본 버튼</span>
+            </button>
+
+            <!-- 토글 버튼 -->
+            <button class="button secondary1 pressed toggle" type="button" aria-label="Secondary1 토글 버튼" aria-pressed="true">
+              <span class="icon pressed" aria-hidden="true"></span>
+              <span class="icon" aria-hidden="true"></span>
+              <span class="label">토글 버튼</span>
+            </button>
+
+            <!-- 비활성 버튼 -->
+            <button class="button secondary1" type="button" aria-label="Secondary1 비활성 버튼" aria-disabled="true">
+              <span class="content icon" aria-hidden="true"></span>
+              <span class="content label">비활성 버튼</span>
+            </button>
+          </div>
+
+          <!-- Dark 테마 버튼들 -->
+          <div class="showcase content row-wrap dark">
+            <!-- 기본 버튼 (Dark) -->
+            <button class="button secondary1" type="button" aria-label="Secondary1 기본 버튼 (Dark)">
+              <span class="icon" aria-hidden="true"></span>
+              <span class="label">기본 버튼</span>
+            </button>
+
+            <!-- 토글 버튼 (Dark) -->
+            <button class="button secondary1 pressed toggle" type="button" aria-label="Secondary1 토글 버튼 (Dark)" aria-pressed="true">
+              <span class="icon pressed" aria-hidden="true"></span>
+              <span class="icon" aria-hidden="true"></span>
+              <span class="label">토글 버튼</span>
+            </button>
+
+            <!-- 비활성 버튼 (Dark) -->
+            <button class="button secondary1" type="button" aria-label="Secondary1 비활성 버튼 (Dark)" aria-disabled="true">
+              <span class="content icon" aria-hidden="true"></span>
+              <span class="content label">비활성 버튼</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- Secondary2 팔레트 -->
+        <section class="showcase content">
+          <h2>Secondary2 팔레트 (Gray 변형)</h2>
+          <p>Gray 색상의 변형을 사용하는 보조 버튼들입니다. 다양한 회색조로 계층적 인터페이스를 구현합니다.</p>
+          <!-- Light 테마 버튼들 -->
+          <div class="showcase content row-wrap">
+            <!-- 기본 버튼 -->
+            <button class="button secondary2" type="button" aria-label="Secondary2 기본 버튼">
+              <span class="icon" aria-hidden="true"></span>
+              <span class="label">기본 버튼</span>
+            </button>
+
+            <!-- 토글 버튼 -->
+            <button class="button secondary2 pressed toggle" type="button" aria-label="Secondary2 토글 버튼" aria-pressed="true">
+              <span class="icon pressed" aria-hidden="true"></span>
+              <span class="icon" aria-hidden="true"></span>
+              <span class="label">토글 버튼</span>
+            </button>
+
+            <!-- 비활성 버튼 -->
+            <button class="button secondary2" type="button" aria-label="Secondary2 비활성 버튼" aria-disabled="true">
+              <span class="content icon" aria-hidden="true"></span>
+              <span class="content label">비활성 버튼</span>
+            </button>
+          </div>
+
+          <!-- Dark 테마 버튼들 -->
+          <div class="showcase content row-wrap dark">
+            <!-- 기본 버튼 (Dark) -->
+            <button class="button secondary2" type="button" aria-label="Secondary2 기본 버튼 (Dark)">
+              <span class="icon" aria-hidden="true"></span>
+              <span class="label">기본 버튼</span>
+            </button>
+
+            <!-- 토글 버튼 (Dark) -->
+            <button class="button secondary2 pressed toggle" type="button" aria-label="Secondary2 토글 버튼 (Dark)" aria-pressed="true">
+              <span class="icon pressed" aria-hidden="true"></span>
+              <span class="icon" aria-hidden="true"></span>
+              <span class="label">토글 버튼</span>
+            </button>
+
+            <!-- 비활성 버튼 (Dark) -->
+            <button class="button secondary2" type="button" aria-label="Secondary2 비활성 버튼 (Dark)" aria-disabled="true">
+              <span class="content icon" aria-hidden="true"></span>
+              <span class="content label">비활성 버튼</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- Primary3 팔레트 -->
+        <section class="showcase content">
+          <h2>Primary3 팔레트 (이중 배경 + 그라데이션)</h2>
+          <p>이중 배경 시스템과 그라데이션 효과를 사용하는 고급 버튼들입니다. z-index가 다른 두 배경 레이어로 구성됩니다.</p>
+          <!-- Light 테마 버튼들 -->
+          <div class="showcase content row-wrap">
+            <!-- 기본 버튼 -->
+            <button class="button primary3" type="button" aria-label="Primary3 기본 버튼">
+              <span class="icon" aria-hidden="true"></span>
+              <span class="label">기본 버튼</span>
+            </button>
+
+            <!-- 토글 버튼 -->
+            <button class="button primary3 pressed toggle" type="button" aria-label="Primary3 토글 버튼" aria-pressed="true">
+              <span class="icon pressed" aria-hidden="true"></span>
+              <span class="icon" aria-hidden="true"></span>
+              <span class="label">토글 버튼</span>
+            </button>
+
+            <!-- 비활성 버튼 -->
+            <button class="button primary3" type="button" aria-label="Primary3 비활성 버튼" aria-disabled="true">
+              <span class="content icon" aria-hidden="true"></span>
+              <span class="content label">비활성 버튼</span>
+            </button>
+          </div>
+
+          <!-- Dark 테마 버튼들 -->
+          <div class="showcase content row-wrap dark">
+            <!-- 기본 버튼 (Dark) -->
+            <button class="button primary3" type="button" aria-label="Primary3 기본 버튼 (Dark)">
+              <span class="icon" aria-hidden="true"></span>
+              <span class="label">기본 버튼</span>
+            </button>
+
+            <!-- 토글 버튼 (Dark) -->
+            <button class="button primary3 pressed toggle" type="button" aria-label="Primary3 토글 버튼 (Dark)" aria-pressed="true">
+              <span class="icon pressed" aria-hidden="true"></span>
+              <span class="icon" aria-hidden="true"></span>
+              <span class="label">토글 버튼</span>
+            </button>
+
+            <!-- 비활성 버튼 (Dark) -->
+            <button class="button primary3" type="button" aria-label="Primary3 비활성 버튼 (Dark)" aria-disabled="true">
+              <span class="content icon" aria-hidden="true"></span>
+              <span class="content label">비활성 버튼</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- Secondary3 팔레트 -->
+        <section class="showcase content">
+          <h2>Secondary3 팔레트 (이중 배경 + 아이콘)</h2>
+          <p>이중 배경 시스템으로 아이콘 영역에 별도 배경을 제공하는 버튼들입니다. 아이콘과 텍스트가 다른 배경을 가집니다.</p>
+          <!-- Light 테마 버튼들 -->
+          <div class="showcase content row-wrap">
+            <!-- 기본 버튼 -->
+            <button class="button secondary3" type="button" aria-label="Secondary3 기본 버튼">
+              <span class="icon" aria-hidden="true"></span>
+              <span class="label">기본 버튼</span>
+            </button>
+
+            <!-- 토글 버튼 -->
+            <button class="button secondary3 pressed toggle" type="button" aria-label="Secondary3 토글 버튼" aria-pressed="true">
+              <span class="icon pressed" aria-hidden="true"></span>
+              <span class="icon" aria-hidden="true"></span>
+              <span class="label">토글 버튼</span>
+            </button>
+
+            <!-- 비활성 버튼 -->
+            <button class="button secondary3" type="button" aria-label="Secondary3 비활성 버튼" aria-disabled="true">
+              <span class="content icon" aria-hidden="true"></span>
+              <span class="content label">비활성 버튼</span>
+            </button>
+          </div>
+
+          <!-- Dark 테마 버튼들 -->
+          <div class="showcase content row-wrap dark">
+            <!-- 기본 버튼 (Dark) -->
+            <button class="button secondary3" type="button" aria-label="Secondary3 기본 버튼 (Dark)">
+              <span class="icon" aria-hidden="true"></span>
+              <span class="label">기본 버튼</span>
+            </button>
+
+            <!-- 토글 버튼 (Dark) -->
+            <button class="button secondary3 pressed toggle" type="button" aria-label="Secondary3 토글 버튼 (Dark)" aria-pressed="true">
+              <span class="icon pressed" aria-hidden="true"></span>
+              <span class="icon" aria-hidden="true"></span>
+              <span class="label">토글 버튼</span>
+            </button>
+
+            <!-- 비활성 버튼 (Dark) -->
+            <button class="button secondary3" type="button" aria-label="Secondary3 비활성 버튼 (Dark)" aria-disabled="true">
+              <span class="content icon" aria-hidden="true"></span>
+              <span class="content label">비활성 버튼</span>
+            </button>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- 스크립트 로딩 -->
+    <!-- 개발 모드: /dist/app.js, 빌드 모드: app.js (빌드 스크립트가 자동 변경) -->
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
+

@@ -1,0 +1,29 @@
+{
+  "name": "button-component-system",
+  "version": "1.0.0",
+  "description": "버튼 컴포넌트 시스템 - ES6 모듈",
+  "type": "module",
+  "scripts": {
+    "dev": "bun server.js",
+    "start": "bun server.js",
+    "build": "bun run scripts/build.js",
+    "update-icons": "bun run scripts/update-icons.js"
+  },
+  "keywords": [
+    "button",
+    "component",
+    "accessibility",
+    "es6-modules",
+    "bun"
+  ],
+  "author": "이강철",
+  "license": "이강철",
+  "devDependencies": {},
+  "dependencies": {
+    "zod": "^4.1.12"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/name296/button-test.git"
+  }
+}
