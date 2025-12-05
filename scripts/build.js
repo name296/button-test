@@ -61,7 +61,9 @@ copyTasks.forEach(({ src, dest, recursive, label }) => {
 // index.html 처리
 console.log('📄 Processing index.html...');
 let html = readFileSync('./src/index.html', 'utf8');
+// 개발 모드 경로(/dist/app.js)와 상대 경로(./app.js) 모두 빌드 모드 경로(app.js)로 변환
 html = html.replace(/src="\/dist\/app\.js"/g, 'src="app.js"');
+html = html.replace(/src="\.\/app\.js"/g, 'src="app.js"');
 
 writeFileSync('./dist/index.html', html);
 writeFileSync('./dist/404.html', html);
