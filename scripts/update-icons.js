@@ -2,16 +2,20 @@
   🎨 아이콘 인덱스 자동 생성 스크립트
   ============================== */
 
-const fs = require('fs');
-const path = require('path');
+import { readdirSync, writeFileSync } from 'fs';
+import { join, dirname } from 'path';
+import { fileURLToPath } from 'url';
 
-const iconDir = path.join(__dirname, '../src/icons/');
-const outputFile = path.join(iconDir, 'index.js');
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+const iconDir = join(__dirname, '../src/icons/');
+const outputFile = join(iconDir, 'index.js');
 
 console.log('🔍 아이콘 디렉토리 스캔 중:', iconDir);
 
 // svg 파일 목록 가져오기
-const files = fs.readdirSync(iconDir)
+const files = readdirSync(iconDir)
   .filter(f => f.endsWith('.svg'))
   .sort();
 
@@ -90,7 +94,7 @@ export const fallbackIcon = 'placeholder';
 `;
 
 // 파일 쓰기
-fs.writeFileSync(outputFile, content, 'utf8');
+writeFileSync(outputFile, content, 'utf8');
 
 console.log('\n✅ icon/index.js 생성 완료!');
 console.log(`📊 총 ${files.length}개 아이콘 등록됨`);
