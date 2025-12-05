@@ -892,6 +892,7 @@
     color: var(--page-text-primary);
     font: 1em/1.4 var(--font-family);
     flex-flow: column nowrap;
+    gap: var(--unit-md);
 
     & header {
       display: flex;
