@@ -68,8 +68,28 @@ jobs:
             echo "❌ Error: index.html not found in dist"
             exit 1
           fi
+          if [ ! -f "./dist/404.html" ]; then
+            echo "❌ Error: 404.html not found in dist"
+            exit 1
+          fi
+          if [ ! -f "./dist/.nojekyll" ]; then
+            echo "❌ Error: .nojekyll not found in dist"
+            exit 1
+          fi
           if [ ! -f "./dist/app.js" ]; then
             echo "❌ Error: app.js not found in dist"
+            exit 1
+          fi
+          if [ ! -f "./dist/app.css" ]; then
+            echo "❌ Error: app.css not found in dist"
+            exit 1
+          fi
+          if [ ! -d "./dist/assets/icons" ]; then
+            echo "❌ Error: assets/icons folder not found in dist"
+            exit 1
+          fi
+          if [ ! -d "./dist/fonts" ]; then
+            echo "❌ Error: fonts folder not found in dist"
             exit 1
           fi
           echo "✅ Build output verified"

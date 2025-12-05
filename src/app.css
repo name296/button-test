@@ -37,63 +37,63 @@
   font-family: 'Pretendard GOV';
   font-weight: 100;
   font-style: normal;
-  src: url('fonts/PretendardGOV-Thin.otf') format('opentype');
+  src: url('./fonts/PretendardGOV-Thin.otf') format('opentype');
 }
 
 @font-face {
   font-family: 'Pretendard GOV';
   font-weight: 200;
   font-style: normal;
-  src: url('fonts/PretendardGOV-ExtraLight.otf') format('opentype');
+  src: url('./fonts/PretendardGOV-ExtraLight.otf') format('opentype');
 }
 
 @font-face {
   font-family: 'Pretendard GOV';
   font-weight: 300;
   font-style: normal;
-  src: url('fonts/PretendardGOV-Light.otf') format('opentype');
+  src: url('./fonts/PretendardGOV-Light.otf') format('opentype');
 }
 
 @font-face {
   font-family: 'Pretendard GOV';
   font-weight: 400;
   font-style: normal;
-  src: url('fonts/PretendardGOV-Regular.otf') format('opentype');
+  src: url('./fonts/PretendardGOV-Regular.otf') format('opentype');
 }
 
 @font-face {
   font-family: 'Pretendard GOV';
   font-weight: 500;
   font-style: normal;
-  src: url('fonts/PretendardGOV-Medium.otf') format('opentype');
+  src: url('./fonts/PretendardGOV-Medium.otf') format('opentype');
 }
 
 @font-face {
   font-family: 'Pretendard GOV';
   font-weight: 600;
   font-style: normal;
-  src: url('fonts/PretendardGOV-SemiBold.otf') format('opentype');
+  src: url('./fonts/PretendardGOV-SemiBold.otf') format('opentype');
 }
 
 @font-face {
   font-family: 'Pretendard GOV';
   font-weight: 700;
   font-style: normal;
-  src: url('fonts/PretendardGOV-Bold.otf') format('opentype');
+  src: url('./fonts/PretendardGOV-Bold.otf') format('opentype');
 }
 
 @font-face {
   font-family: 'Pretendard GOV';
   font-weight: 800;
   font-style: normal;
-  src: url('fonts/PretendardGOV-ExtraBold.otf') format('opentype');
+  src: url('./fonts/PretendardGOV-ExtraBold.otf') format('opentype');
 }
 
 @font-face {
   font-family: 'Pretendard GOV';
   font-weight: 900;
   font-style: normal;
-  src: url('fonts/PretendardGOV-Black.otf') format('opentype');
+  src: url('./fonts/PretendardGOV-Black.otf') format('opentype');
 }
 
 /* ==============================

@@ -41,27 +41,14 @@ export const iconPaths = {
   "warning": "warning.svg"
 };
 
-// 선택자 맵핑 (특수한 경우만 정의, 나머지는 기본 선택자 사용)
-export const iconSelectors = {
-  default: '.content.icon:not(.pressed)',
-  toggle: '.content.icon.pressed',
-  contrast: '[data-icon="contrast"]',
-  large: '[data-icon="large"]'
-};
-
-// 기본 선택자 생성 함수
-export function getSelector(iconKey) {
-  return iconSelectors[iconKey] || `[data-icon="${iconKey}"]`;
-}
-
 // 전체 경로 생성 함수
 export function getIconPath(iconKey) {
   const filename = iconPaths[iconKey];
   if (!filename) {
     console.warn(`⚠️ Icon "${iconKey}" not found in iconPaths, using placeholder`);
-    return 'src/assets/icons/placeholder.svg';
+    return './assets/icons/placeholder.svg';
   }
-  return `src/assets/icons/${filename}`;
+  return `./assets/icons/${filename}`;
 }
 
 // iconMap 생성 함수
@@ -69,12 +56,9 @@ export function createIconMap() {
   const map = {};
   
   for (const [key, filename] of Object.entries(iconPaths)) {
-    // default와 placeholder는 중복되므로 placeholder 제외
-    if (key === 'placeholder' && map['default']) continue;
-    
     map[key] = {
       path: getIconPath(key),
-      selector: getSelector(key)
+      selector: `[data-icon="${key}"]`
     };
   }
   
@@ -88,7 +72,7 @@ export const fallbackIcon = 'placeholder';
   📊 메타데이터
   ============================== */
 // 총 아이콘 개수: 33
-// 생성 일시: 2025-12-05T12:55:26.804Z
+// 생성 일시: 2025-12-05T15:28:10.598Z
 
 
 

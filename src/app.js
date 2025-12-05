@@ -63,6 +63,7 @@ const SVGLoader = {
   },
   
   injectAllIcons() {
+    // 1단계: data-icon 속성이 있는 요소에 해당 아이콘 주입
     Object.entries(this.iconMap).forEach(([key, config]) => {
       // 토글 아이콘은 CSS content로 처리하므로 JavaScript 인젝션 제외
       if (key === 'toggle') {
@@ -90,6 +91,24 @@ const SVGLoader = {
         el.innerHTML = processedSvg;
       });
     });
+    
+    // 2단계: data-icon 속성이 없는 .icon 요소에 기본 아이콘(placeholder) 주입
+    const defaultIcon = this.cache.get(fallbackIcon);
+    if (defaultIcon) {
+      const processedDefaultIcon = this.convertToCurrentColor(defaultIcon);
+      const iconElementsWithoutDataIcon = document.querySelectorAll('.icon:not([data-icon])');
+      
+      iconElementsWithoutDataIcon.forEach(el => {
+        // .toggle .icon.pressed는 CSS로 처리하므로 제외
+        if (el.closest('.toggle') && el.classList.contains('pressed')) {
+          return;
+        }
+        // 이미 SVG가 주입되어 있지 않은 경우에만 주입
+        if (!el.innerHTML.trim()) {
+          el.innerHTML = processedDefaultIcon;
+        }
+      });
+    }
     
     console.log('✅ All icons injected to DOM (converted to currentColor)');
   },
