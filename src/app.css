@@ -545,7 +545,7 @@
     will-change: transform;
     contain: layout style;
     /* .background.dynamic 스타일을 .button에 통합 */
-    background: var(--primary1-background-color-default);
+    background-color: var(--primary1-background-color-default);
     background-clip: padding-box;
     border-style: var(--border-style-default);
     border-color: var(--primary1-border-color-default);
@@ -598,7 +598,7 @@
     &[aria-disabled="true"] {
       cursor: var(--button-cursor-disabled);
       color: var(--primary1-content-color-disabled);
-      background: var(--primary1-background-color-disabled);
+      background-color: var(--primary1-background-color-disabled);
       border-style: var(--border-style-disabled);
       border-color: var(--primary1-border-color-disabled);
     }
@@ -617,61 +617,61 @@
        ======================================== */
 
     &.primary1 {
-      background: var(--primary1-background-color-default);
+      background-color: var(--primary1-background-color-default);
       border-color: var(--primary1-border-color-default);
       color: var(--primary1-content-color-default);
       
       &.pressed:not(.toggle) {
-        background: var(--primary1-background-color-pressed);
+        background-color: var(--primary1-background-color-pressed);
         border-color: var(--primary1-border-color-pressed);
         color: var(--primary1-content-color-pressed);
       }
       &.toggle {
-        background: var(--primary1-background-color-default);
+        background-color: var(--primary1-background-color-default);
         border-color: var(--primary1-border-color-default);
         color: var(--primary1-content-color-default);
       }
       &.toggle.pressed {
-        background: var(--primary1-background-color-pressed);
+        background-color: var(--primary1-background-color-pressed);
         border-color: var(--primary1-border-color-pressed);
         color: var(--primary1-content-color-pressed);
       }
       &[aria-disabled="true"] {
-        background: var(--primary1-background-color-disabled);
+        background-color: var(--primary1-background-color-disabled);
         border-color: var(--primary1-border-color-disabled);
         color: var(--primary1-content-color-disabled);
       }
     }
 
     &.primary2 {
-      background: var(--primary2-background-color-default);
+      background-color: var(--primary2-background-color-default);
       border-color: var(--primary2-border-color-default);
       color: var(--primary2-content-color-default);
       
       &.pressed:not(.toggle) {
-        background: var(--primary2-background-color-pressed);
+        background-color: var(--primary2-background-color-pressed);
         border-color: var(--primary2-border-color-pressed);
         color: var(--primary2-content-color-pressed);
       }
       &.toggle {
-        background: var(--primary2-background-color-default);
+        background-color: var(--primary2-background-color-default);
         border-color: var(--primary2-border-color-default);
         color: var(--primary2-content-color-default);
       }
       &.toggle.pressed {
-        background: var(--primary2-background-color-pressed);
+        background-color: var(--primary2-background-color-pressed);
         border-color: var(--primary2-border-color-pressed);
         color: var(--primary2-content-color-pressed);
       }
       &[aria-disabled="true"] {
-        background: var(--primary2-background-color-disabled);
+        background-color: var(--primary2-background-color-disabled);
         border-color: var(--primary2-border-color-disabled);
         color: var(--primary2-content-color-disabled);
       }
     }
 
     &.primary3 {
-      background: var(--primary3-background1-color-default);
+      background-color: var(--primary3-background1-color-default);
       border-color: var(--primary3-border-color-default);
       color: var(--primary3-content-color-default);
       
@@ -680,7 +680,7 @@
       }
       
       &.pressed:not(.toggle) {
-        background: var(--primary3-background1-color-pressed);
+        background-color: var(--primary3-background1-color-pressed);
         border-color: var(--primary3-border-color-pressed);
         color: var(--primary3-content-color-pressed);
         
@@ -689,7 +689,7 @@
         }
       }
       &.toggle {
-        background: var(--primary3-background1-color-default);
+        background-color: var(--primary3-background1-color-default);
         border-color: var(--primary3-border-color-default);
         color: var(--primary3-content-color-default);
         
@@ -698,7 +698,7 @@
         }
       }
       &.toggle.pressed {
-        background: var(--primary3-background1-color-pressed);
+        background-color: var(--primary3-background1-color-pressed);
         border-color: var(--primary3-border-color-pressed);
         color: var(--primary3-content-color-pressed);
         
@@ -707,7 +707,7 @@
         }
       }
       &[aria-disabled="true"] {
-        background: var(--primary3-background1-color-disabled);
+        background-color: var(--primary3-background1-color-disabled);
         border-color: var(--primary3-border-color-disabled);
         color: var(--primary3-content-color-disabled);
         
@@ -722,61 +722,61 @@
        ======================================== */
 
     &.secondary1 {
-      background: var(--secondary1-background-color-default);
+      background-color: var(--secondary1-background-color-default);
       border-color: var(--secondary1-border-color-default);
       color: var(--secondary1-content-color-default);
       
       &.pressed:not(.toggle) {
-        background: var(--secondary1-background-color-pressed);
+        background-color: var(--secondary1-background-color-pressed);
         border-color: var(--secondary1-border-color-pressed);
         color: var(--secondary1-content-color-pressed);
       }
       &.toggle {
-        background: var(--secondary1-background-color-default);
+        background-color: var(--secondary1-background-color-default);
         border-color: var(--secondary1-border-color-default);
         color: var(--secondary1-content-color-default);
       }
       &.toggle.pressed {
-        background: var(--secondary1-background-color-pressed);
+        background-color: var(--secondary1-background-color-pressed);
         border-color: var(--secondary1-border-color-pressed);
         color: var(--secondary1-content-color-pressed);
       }
       &[aria-disabled="true"] {
-        background: var(--secondary1-background-color-disabled);
+        background-color: var(--secondary1-background-color-disabled);
         border-color: var(--secondary1-border-color-disabled);
         color: var(--secondary1-content-color-disabled);
       }
     }
 
     &.secondary2 {
-      background: var(--secondary2-background-color-default);
+      background-color: var(--secondary2-background-color-default);
       border-color: var(--secondary2-border-color-default);
       color: var(--secondary2-content-color-default);
       
       &.pressed:not(.toggle) {
-        background: var(--secondary2-background-color-pressed);
+        background-color: var(--secondary2-background-color-pressed);
         border-color: var(--secondary2-border-color-pressed);
         color: var(--secondary2-content-color-pressed);
       }
       &.toggle {
-        background: var(--secondary2-background-color-default);
+        background-color: var(--secondary2-background-color-default);
         border-color: var(--secondary2-border-color-default);
         color: var(--secondary2-content-color-default);
       }
       &.toggle.pressed {
-        background: var(--secondary2-background-color-pressed);
+        background-color: var(--secondary2-background-color-pressed);
         border-color: var(--secondary2-border-color-pressed);
         color: var(--secondary2-content-color-pressed);
       }
       &[aria-disabled="true"] {
-        background: var(--secondary2-background-color-disabled);
+        background-color: var(--secondary2-background-color-disabled);
         border-color: var(--secondary2-border-color-disabled);
         color: var(--secondary2-content-color-disabled);
       }
     }
 
     &.secondary3 {
-      background: var(--secondary3-background1-color-default);
+      background-color: var(--secondary3-background1-color-default);
       border-color: var(--secondary3-border-color-default);
       color: var(--secondary3-content-color-default);
       
@@ -785,7 +785,7 @@
       }
       
       &.pressed:not(.toggle) {
-        background: var(--secondary3-background1-color-pressed);
+        background-color: var(--secondary3-background1-color-pressed);
         border-color: var(--secondary3-border-color-pressed);
         color: var(--secondary3-content-color-pressed);
         
@@ -794,7 +794,7 @@
         }
       }
       &.toggle {
-        background: var(--secondary3-background1-color-default);
+        background-color: var(--secondary3-background1-color-default);
         border-color: var(--secondary3-border-color-default);
         color: var(--secondary3-content-color-default);
         
@@ -803,7 +803,7 @@
         }
       }
       &.toggle.pressed {
-        background: var(--secondary3-background1-color-pressed);
+        background-color: var(--secondary3-background1-color-pressed);
         border-color: var(--secondary3-border-color-pressed);
         color: var(--secondary3-content-color-pressed);
         
@@ -812,7 +812,7 @@
         }
       }
       &[aria-disabled="true"] {
-        background: var(--secondary3-background1-color-disabled);
+        background-color: var(--secondary3-background1-color-disabled);
         border-color: var(--secondary3-border-color-disabled);
         color: var(--secondary3-content-color-disabled);
         
